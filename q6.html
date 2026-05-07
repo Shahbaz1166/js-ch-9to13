@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 6</title>
+  </head>
+  <body>
+    <script>
+      let totalMarks = +prompt("Enter total marks:");
+      let marksObtained = +prompt("Enter marks obtained:");
+
+      let percentage = (marksObtained / totalMarks) * 100;
+
+      let grade, remarks;
+
+      if (percentage >= 80) {
+        grade = "A-one";
+        remarks = "Excellent";
+      } else if (percentage >= 70) {
+        grade = "A";
+        remarks = "Good";
+      } else if (percentage >= 60) {
+        grade = "B";
+        remarks = "You need to improve";
+      } else {
+        grade = "Fail";
+        remarks = "Sorry";
+      }
+
+      document.write(
+        "<h1>Marks Sheet</h1>" +
+          "<br> Total marks: " +
+          totalMarks +
+          "<br> Marks obtained: " +
+          marksObtained +
+          "<br> Percentage: " +
+          percentage +
+          "%" +
+          "<br> Grade: " +
+          grade +
+          "<br> Remarks: " +
+          remarks,
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS CH 9-11</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+      }
+      .q-box {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        background: #fff;
+      }
+      .q-title {
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+      }
+
+      .ex {
+        font-weight: bold;
+        color: #007bff;
+        margin-bottom: 10px;
+        display: block;
+        text-align: left;
+      }
+      pre {
+        background: #272822;
+        color: #f8f8f2;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .run-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .run-btn:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript Assignment Chapters (9-11)</h1>
+      <p style="text-align: center">
+        Click <b>Run Code</b> below each question to view the output in a new
+        tab.
+      </p>
+
+      <div class="q-box">
+        <span class="q-title">
+          1. Write a program to take “city” name as input from user. If user
+          enters “Karachi”, welcome the user like this: “Welcome to city of
+          lights”
+        </span>
+        <pre><code>var city = prompt("Enter city:");
+if(city.toLowerCase() === "karachi") alert("Welcome to city of lights");</code></pre>
+        <a href="q1.html" target="_blank">
+          <div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">
+          2. Write a program to take “gender” as input from user. If the user is
+          male, give the message: Good Morning Sir. If the user is female, give
+          the message: Good Morning Ma'am.
+        </span>
+        <pre><code>var g = prompt("Gender?");
+if(g === "male") alert("Good Morning Sir");
+else alert("Good Morning Ma'am");</code></pre>
+        <a href="q2.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title">
+          3. Write a program to take input color of road traffic signal from the
+          user & show the message according to this table:</span
+        >
+        <pre><code>var col = prompt("Signal Color?");
+if(col === "red") alert("Must Stop");
+else if(col === "yellow") alert("Ready");
+else alert("Move now");</code></pre>
+        <a href="q3.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >5. Run this script, & check whether alert message would be displayed
+          or not. Record the outputs.
+        </span>
+        <pre><code>
+// a.
+var a = 4;
+if (++a === 5){
+    alert("given condition for variable a is true"); // Displayed 
+}
+
+// b.
+var b = 82;
+if (b++ === 83){
+    alert("given condition for variable b is true"); // Not Displayed
+}
+
+// c.
+var c = 12;
+if (c++ === 13){
+    alert("condition 1 is true"); // Not Displayed
+}
+if (c === 13){
+    alert("condition 2 is true"); // Displayed
+}
+if (++c < 14){
+    alert("condition 3 is true"); // Not Displayed
+}
+if(c === 14){
+    alert("condition 4 is true"); // Displayed
+}
+
+// d.
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost){
+    alert("The cost equals"); //                 Displayed
+}
+
+// e.
+if (true){
+    alert("True"); //   Displayed
+}
+if (false){
+    alert("False"); //  Not Displayed
+}
+
+// f.
+if("car" < "cat"){
+    alert("car is smaller than cat"); // Displayed
+}</code></pre>
+        <a href="q5a.html" target="_blank"
+          ><span class="run-btn">a. Run Code</span></a
+        >
+        <a href="q5b.html" target="_blank"
+          ><span class="run-btn">b. Run Code</span></a
+        >
+        <a href="q5c.html" target="_blank"
+          ><span class="run-btn">c. Run Code</span></a
+        >
+        <a href="q5d.html" target="_blank"
+          ><span class="run-btn">d. Run Code</span></a
+        >
+        <a href="q5e.html" target="_blank"
+          ><span class="run-btn">e. Run Code</span></a
+        >
+        <a href="q5f.html" target="_blank"
+          ><span class="run-btn">f. Run Code</span></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >6. Write a program to take input the marks obtained in three subjects
+          & total marks. Compute & show the resulting percentage on your page.
+          Take percentage & compute grade as per following table:</span
+        >
+        <pre><code>
+      
+var totalMarks = +prompt("Enter total marks:");
+var marksObtained = +prompt("Enter marks obtained:");
+
+
+var percentage = (marksObtained / totalMarks) * 100;
+
+var grade, remarks;
+
+if (percentage >= 80) {
+    grade = "A-one";
+    remarks = "Excellent";
+} else if (percentage >= 70) {
+    grade = "A";
+    remarks = "Good";
+} else if (percentage >= 60) {
+    grade = "B";
+    remarks = "You need to improve";
+} else {
+    grade = "Fail";
+    remarks = "Sorry";
+}
+
+
+document.write("<h2>Marks Sheet</h2>" + 
+                          "<br> Total marks: " + totalMarks + 
+                          "<br> Marks obtained: " + marksObtained + 
+                          "<br> Percentage: " + percentage + "%" + 
+                          "<br> Grade: " + grade + 
+                          "<br> Remarks: " + remarks;)
+</code></pre>
+        <a href="q6.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >8. Write a program to check whether the given number is divisible by
+          3. Show the message to the user if the number is divisible by 3.
+        </span>
+        <pre><code>var num = +prompt("Enter a number to check divisibility by 3:");
+if (num % 3 === 0) {
+    alert("The number is divisible by 3");
+}</code></pre>
+        <a href="q8.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >9. Write a program that checks whether the given input is an even
+          number or an odd number.
+        </span>
+        <pre><code>var n = +prompt("Enter a number to check Even or Odd:");
+if (n % 2 === 0) {
+    alert("This is an Even number");
+} else {
+    alert("This is an Odd number");
+}</code></pre>
+        <a href="q9.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >10. Write a program that takes temperature as input and shows a
+          message based on following criteria.
+          <div style="text-align: justify; margin-left: 28px">
+            <br />a. T > 40 then “It is too hot outside.” <br />b. T > 30 then
+            “The Weather today is Normal.” <br />c. T > 20 then “Today’s Weather
+            is cool.” <br />d. T > 10 then “OMG! Today’s weather is so Cool.”
+          </div>
+        </span>
+        <pre><code>var t = +prompt("Enter temperature:");
+if (t > 40) {
+    alert("It is too hot outside.");
+} else if (t > 30) {
+    alert("The Weather today is Normal.");
+} else if (t > 20) {
+    alert("Today's Weather is cool.");
+} else if (t > 10) {
+    alert("OMG! Today's weather is so Cool.");
+}</code></pre>
+        <a href="q10.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >11. Write a program to create a calculator for +,-,*, / & % using if
+          statements. Take the following input: a. First number b. Second number
+          c. Operation (+, -, *, /, %) Compute & show the calculated result to
+          user.
+        </span>
+        <pre><code>var val1 = +prompt("Enter first number:");
+var val2 = +prompt("Enter second number:");
+var op = prompt("Enter operation (+, -, *, /, %):");
+
+if (op === "+") {
+    alert(val1 + val2);
+} else if (op === "-") {
+    alert(val1 - val2);
+} else if (op === "*") {
+    alert(val1 * val2);
+} else if (op === "/") {
+    alert(val1 / val2);
+} else if (op === "%") {
+    alert(val1 % val2);
+}</code></pre>
+        <a href="q11.html" target="_blank"
+          ><div class="run-btn">Run Code</div></a
+        >
+      </div>
+      <h1>JavaScript Assignment Chapters (12-13)</h1>
+      <div class="q-box">
+        <span class="q-title"
+          >2. Write a JavaScript program that accept two integers and display
+          the larger. Also show if the two integers are equal.
+        </span>
+        <pre><code>
+var num1 = +prompt("Enter the first integer:");
+var num2 = +prompt("Enter the second integer:");
+
+
+if (num1 === num2) {
+    document.write("The two integers are equal: " + num1);
+} 
+else if (num1 > num2) {
+    document.write("The larger integer is: " + num1);
+} 
+else {
+    document.write("The larger integer is: " + num2);
+}</code></pre>
+        <a href="2.html" target="_blank"><div class="run-btn">Run Code</div></a>
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >3. Write a program that takes input a number from user & state
+          whether the number is positive, negative or zero.
+        </span>
+        <pre><code>var number = +prompt("Enter a number:");
+
+      if (number > 0) {
+        document.write("The number is positive.");
+      } else if (number < 0) {
+        document.write("The number is negative.");
+      } else {
+        document.write("The number is zero.");
+      }</code></pre>
+        <a href="3.html" target="_blank"><div class="run-btn">Run Code</div></a>
+      </div>
+
+      <div class="q-box">
+        <span class="q-title"
+          >4. Write a program that takes a character (i.e. string of length 1)
+          and returns true if it is a vowel, false otherwise
+        </span>
+        <pre><code>var char = prompt("Enter a single character:");
+
+
+var lowerChar = char.toLowerCase();
+
+
+if (lowerChar === "a" || lowerChar === "e" || lowerChar === "i" || lowerChar === "o" || lowerChar === "u") {
+    document.write("Result: true");
+} 
+else {
+    document.write("Result: false");
+}</code></pre>
+        <a href="4.html" target="_blank"><div class="run-btn">Run Code</div></a>
+      </div>
+
+      <div class="q-box">
+        <span class="q-title ex"
+          >5. Write a program that:
+          <br />
+          <div style="margin-left: 28px">
+            a. Store correct password in a JS variable.
+            <br />
+
+            b. Asks user to enter his/her password
+            <br />
+
+            c. Validate the two passwords:
+            <br />
+            <br />
+
+            i. Check if user has entered password. If not, then give message “
+            Please enter your password”
+            <br />
+            <br />
+
+            ii. Check if both passwords are same. If they are same, show message
+            “Correct! The password you entered matches the original password”.
+            Show “Incorrect password” otherwise.
+          </div>
+        </span>
+        <pre><code>var correctPassword = "smit";
+
+      var userPassword = prompt("Please enter your password:");
+
+      if (!userPassword) {
+        document.write("Please enter your password");
+      } else if (userPassword === correctPassword) {
+        document.write(
+          "Correct! The password you entered matches the original password",
+        );
+      } else {
+        document.write("Incorrect password");
+      }</code></pre>
+        <a href="5.html" target="_blank"><div class="run-btn">Run Code</div></a>
+      </div>
+    </div>
+  </body>
+</html>
